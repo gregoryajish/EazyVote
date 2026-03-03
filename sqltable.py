@@ -1,0 +1,25 @@
+from sqlite3 import Cursor
+import mysql.connector
+con=mysql.connector.connect(host = "localhost", user="root", password="1234")
+cur = con.cursor()
+cur.execute("create database if not exists george")
+cur.execute("use george")
+cur.execute("Create table if not exists candidate(Serial_No int, Name varchar(30),class varchar(4),Post varchar(20))")
+cur.execute("alter table candidate add unique index(Serial_No)")
+cur.execute("insert ignore into candidate values(1, 'Alan Mathew','X','School Headboy')")
+cur.execute("insert ignore into candidate values(2, 'Arjun Santhosh','X','School Headboy')")
+cur.execute("insert ignore into candidate values(3, 'Jeevana M. S.','X','School Headgirl')")
+cur.execute("insert ignore into candidate values(4, 'Haripriya Rajeev','X','School Headgirl')")
+cur.execute("insert ignore into candidate values(5, 'Karthikey Lal','X','School Headboy')")
+cur.execute("insert ignore into candidate values(6, 'Vaiga S. Nair','X','School Headgirl')")
+
+cur.execute("Create table if not exists votes(Serial_No int, Name varchar(30),votes int)")
+cur.execute("alter table votes add unique index(Serial_No);")
+cur.execute("insert ignore into votes values(1, 'Alan Mathew',0)")
+cur.execute("insert ignore into votes values(2, 'Arjun Santhosh',0)")
+cur.execute("insert ignore into votes values(3, 'Jeevana M. S.',0)")
+cur.execute("insert ignore into votes values(4, 'Haripriya Rajeev',0)")
+cur.execute("insert ignore into votes values(5, 'Karthikey Lal',0)")
+cur.execute("insert ignore into votes values(6, 'Vaiga S. Nair',0)")
+
+con.commit()
