@@ -20,8 +20,7 @@ Built with Python, it provides a smooth, GUI-driven experience for voters and ad
 - 🗄️ **MySQL-Backed Storage** — All votes are persisted in a local MySQL database (`george`) in real time
 - 📋 **CSV Report Export** — Results are automatically exported to `results.csv` on report generation
 - ℹ️ **About & Terms & Conditions** — Built-in popups for legal and product information
-- 🥚 **Hidden Easter Egg** — Press `Ctrl+Alt+D` to discover a hidden message from the developers
-- 🧹 **Vote Reset Utility** — Admin can reset all votes to zero without clearing candidate data
+-  **Vote Reset Utility** — Admin can reset all votes to zero without clearing candidate data
 - 🔧 **DB Initializer Script** — One-shot script to create and seed the database from scratch
 
 ---
@@ -213,12 +212,6 @@ Output will be placed in the `dist/` directory.
 ## Window Resolution
 
 The application is designed and optimized for a **1366×768** display resolution. Using a different resolution may affect UI element positioning.
-
----
-
-## Easter Egg 🥚
-
-Press **`Ctrl + Alt + D`** anywhere in the voting or results window to reveal a hidden message from the developers.
 
 ---
 
